@@ -8,10 +8,10 @@ function NavigationComponent() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-4 mb-lg-0">
                     <li className="nav-item">
-                        <Link className={"nav-link" + (location.pathname === "/" ? " active" : "")} to="/">Cart</Link>
+                        <Link to="/mycart">Cart</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={"nav-link" + (location.pathname === "/home" ? " active" : "")} to="/home">Store</Link>
+                        <Link to="/">Store</Link>
                     </li>
                 </ul>
             </div>
