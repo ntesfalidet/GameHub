@@ -24,14 +24,19 @@ router.post("/loginUser", async function (req, res) {
 // This route will insert user object into users collection
 router.post("/register", async function (req, res) {
   const user = req.body;
-
+  const userRes = await gameHubDB.findUser(user);
+  // check whether the user already exists or not
+  if (userRes && userRes.length != 0) {
+    console.log("This user already exists");
+    return res.send({ success : false });
+  }
   try {
     const newUser = await gameHubDB.createUser(user);
     console.log("User successfully registered", newUser);
-    res.status(200).send({ users: newUser });
+    return res.status(200).send({ users: newUser, success: true });
   } catch (error) {
     console.log("Error message: ", error);
-    res.status(400).send({ err: error });
+    return res.status(400).send({ err: error });
   }
 });
 
@@ -97,15 +102,44 @@ router.post("/getMyGames", async function (req, res) {
 /// Routes for gamer (Yuanyuan) ///
 // Add to cart route performs: Add game object to cart collection
 router.post("/addToCart", async function (req, res) {
-  const game = req.body;
+  const user = req.body.userName;
+  const game = req.body.game;
   try {
-    const addGameToCart = await gameHubDB.addGameToCart(game);
-    console.log("Added game to game-hub-db", addGameToCart);
+    const addGameToCart = await gameHubDB.addGameToCart(game, user);
+    console.log("Added game to user's cart", addGameToCart);
+    res.status(200).send({success : true});
   } catch (error) {
     console.log("add game error: ", error)
     res.status(400).send({err: error});
+  }  
+});
+
+/// Routes for gamer (Yuanyuan) ///
+// Delete Items from cart
+router.post("/deleteCartItem", async function (req, res) {
+  const game = req.body.gameInfo;
+  const user = req.body.gamer;
+  try {
+    const deleteItemFromCart = await gameHubDB.deleteItems(user, game);
+    console.log("Deleted the game item", deleteItemFromCart);
+    res.status(200).send({success : true});
+  } catch (error) {
+    console.log("Delete game error: ", error)
+    res.status(400).send({err: error});
   }
-}); 
+});
+
+/// Routes for gamer (Yuanyuan) ///
+// Get Cart Lists
+router.post("/getCartItems", async function (req, res) {
+  const gamer = req.body;
+  try {
+    const findGamer = await gameHubDB.findUser(gamer);
+    res.status(200).send({cartItems: findGamer.cart });
+  } catch (error) {
+    res.status(400).send({err: error});
+  }
+});
 
 /// Routes for gaming company (Nathaniel) ///
 
