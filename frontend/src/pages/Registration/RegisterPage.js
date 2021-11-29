@@ -1,10 +1,32 @@
 import React from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import './styles/RegisterPage.css';
 
 // Registeration Page
 // Yuanyuan
 function RegisterPage() {
+    const userNameRef = useRef();
+    const passwordRef = useRef();
+    const roleRef = useRef();
+    const registerHandler = async (event) => {
+        event.preventDefault();
+        const userInputData = {
+            userName: userNameRef.current.value,
+            password: passwordRef.current.value,
+            role: roleRef.current.value,
+        }
+        const newUser = await fetch("/api/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userInputData),
+        });
+        if (!newUser.ok) {
+            console.log("Response status ", newUser.status);
+        }
+    }
     return (
         <div id="registerContainer">
             <div className="row">
@@ -37,6 +59,10 @@ function RegisterPage() {
                 <div className="center">
                     <Link to="/"><button type="submit" className="btn btn-primary login">Login if you have an account</button></Link> 
                 </div>
+            </div>
+            <div className="footer">
+                <div className="center">Copyright 2021</div>
+                <div className="center">Designed by Nathaniel & Yuanyuan</div>
             </div>
         </div>
     );
