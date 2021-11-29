@@ -9,7 +9,7 @@ const DB_NAME = "game-hub-db";
 function gameHubDB() {
   // Database operations/functions in gameHubDB object
   const gameHubDB = {};
-  
+
   // Finds existing user object (based on attributes of user object as a query)
   // This function is called when a user (gamer or gaming company) logs in and
   // for getting my games for a gaming company user.
@@ -27,7 +27,7 @@ function gameHubDB() {
       // returns the array of users in users collection that match
       // the passed in user object as query
       const res = await usersCollection.find(user).toArray();
-      console.log("dnajdjhaksjd:" , res);
+      console.log("dnajdjhaksjd:", res);
       return res;
     } catch (error) {
       console.log(error);
@@ -48,7 +48,7 @@ function gameHubDB() {
       user.cart = [];
     }
     try {
-      client = new MongoClient(URL, {useUnifiedTopology: true});
+      client = new MongoClient(URL, { useUnifiedTopology: true });
       console.log("Connecting Database");
       await client.connect();
       console.log("Connected Successfully");
@@ -137,7 +137,7 @@ function gameHubDB() {
     }
   }
 
-    // When gamers adds games to their cart, games will be insert into cart collection.
+  // When gamers adds games to their cart, games will be insert into cart collection.
   // This function is called when gamers are adding game objects to their cart.
   // Yuanyuan
   gameHubDB.addGameToCart = async function (game, user) {
@@ -145,15 +145,19 @@ function gameHubDB() {
     // check whether the user is a gamer
     // if the user is a gamer, then we are doing following things
     try {
-      client = new MongoClient(URL, { userUnifiedTopology: true });
+      client = new MongoClient(URL, { useUnifiedTopology: true });
       console.log("Connecting to game-hub-db");
       await client.connect();
       console.log("Successfully connected");
       const db = client.db(DB_NAME);
-      const curUser = db.findUser(user);
-      console.log(curUser);
-      user.cart.push(game);
-    } catch(error) {
+      const usersCollection = db.collection("users");
+      console.log(user);
+      console.log(game);
+      return await usersCollection.updateOne(
+        { _id: new ObjectId(user._id) },
+        { $push: { cart: game } }
+      );
+    } catch (error) {
       console.log(error);
     } finally {
       console.log("Closing");
@@ -161,10 +165,12 @@ function gameHubDB() {
     }
   }
 
+  // Delete items from cart array 
+  // Yuanyuan
   gameHubDB.deleteItems = async function (user, game) {
     let client;
     try {
-      client = new MongoClient(URL, {useUnifiedTopology: true});
+      client = new MongoClient(URL, { useUnifiedTopology: true });
       console.log("Connecting to game-hub-db");
       await client.connect();
       console.log("Successfully connected");
