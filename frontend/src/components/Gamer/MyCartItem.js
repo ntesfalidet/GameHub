@@ -9,7 +9,7 @@ function MyCartItem({ game, cartItemInfo }) {
     console.log("sad", cartItemInfo);
     const deleteButtonHandler = async (event) => {
         const userInfo = {
-            gamer : {
+            gamer: {
                 _id: curUser._id,
                 userName: curUser.userName,
                 role: curUser.role,
@@ -33,15 +33,15 @@ function MyCartItem({ game, cartItemInfo }) {
     return (
         <div className="card mb-30">
             <div>
-                <div class="mainImg"><img src={game.gameImageURL} alt="Game Image"/></div>
+                <div class="mainImg"><img src={game.gameImageURL} alt="Game Image" /></div>
             </div>
-                <div className="card-body text-center">
-                    <h4 className="card-title">{game.gameTitle}</h4>
-                    <h5 className="card-text"><small>price: </small>${game.gamePrice}</h5>
-                    <h5 className="card-text"><small>published by: </small>{game.publishedBy}</h5>
-                    <button onClick={()=>deleteButtonHandler() } className="btn btn-sm btn-warning float-right">Delete this item</button>
+            <div className="card-body text-center">
+                <h4 className="card-title">{game.gameTitle}</h4>
+                <h5 className="card-text"><small>price: </small>${game.gamePrice}</h5>
+                <h5 className="card-text"><small>published by: </small>{game.publishedBy}</h5>
+                <button onClick={() => deleteButtonHandler()} className="btn btn-sm btn-warning float-right">Delete this item</button>
             </div>
-        </div> 
+        </div>
     );
 }
 

@@ -1,3 +1,5 @@
+/* Yuanyuan:
+    Style sheet for cart items part */
 .card {
     margin-top: 10%;
     position: relative;
@@ -6,7 +8,7 @@
     border-radius: 7px !important;
     border-color: #DCDCDC;
     margin-bottom: 30px !important;
-    left:60%;
+    left: 60%;
 }
 
 .card-title {

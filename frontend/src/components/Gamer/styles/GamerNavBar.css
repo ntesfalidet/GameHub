@@ -1,6 +1,9 @@
+/* Yuanyuan: 
+    Style Sheet for Navigation bar of Gamer Pages */
 .navbar {
     background-color: #696969;
 }
+
 .nav-item {
     margin-left: 13%;
     margin-top: 5%;
@@ -43,7 +46,7 @@
 .button:hover span {
     padding-right: 25px;
 }
-  
+
 .button:hover span:after {
     opacity: 1;
     right: 0;
