@@ -4,24 +4,24 @@ import NavigationComponent from "../../components/Gamer/GamerNavBar";
 import StoreList from "../../components/Gamer/StoreList";
 
 function GamerStorePage() {
-    let [StoreItem, setStoreItem] = useState([]);
+    let [storeItem, setStoreItem] = useState([]);
+    console.log("gaga", storeItem);
     const getStoreItems = async () => {
-        const storeItemsInfo = await fetch("/api/getAllStoreGame");
+        const storeItemsInfo = await fetch("/api/getAllStoreGames");
         if (!storeItemsInfo.ok) {
             console.log("Response status ", storeItemsInfo.status);
         } else {
-            let storeItemsInfo = await storeGamesResRawData.json();
-            let storeGamesData = storeItemsInfo.storeGames;
-            setStoreGames(storeGamesData);
+            let storeResData = await storeItemsInfo.json();
+            let storeGamesData = storeResData.storeGames;
+            setStoreItem(storeGamesData);
         }
     }
     useEffect(() => {
-        loadStoreGamesData();}, []);
+        getStoreItems();}, []);
     return (
         <div>
             <NavigationComponent />
-            <StoreList game={game}></StoreList>
-        <h1>sss</h1>
+            <StoreList game={storeItem}></StoreList>
         </div>
   );
 }

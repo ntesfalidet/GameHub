@@ -35,7 +35,7 @@ function LoginPage() {
       },
       body: JSON.stringify(userInputData),
     });
-
+    console.log("userRaw:", userResRawData);
     // If response is not returned successfully
     if (!userResRawData.ok) {
       console.log("Response status ", userResRawData.status);
@@ -49,7 +49,6 @@ function LoginPage() {
       // user is found from user input data or no user objects if 
       // no existing user is found from user input data  
       let usersData = userResData.users;
-
       // If there is no existing user we want to render login error (via useState)
       if (!usersData.length) {
         console.log("User does not exist (either incorrect username, password, and/or role credentials)");
@@ -59,11 +58,22 @@ function LoginPage() {
       else {
         // Store specific user attributes (_id, userName, and role) for current 
         // logged in user using sessionStorage
-        let currUser = {
-          _id: usersData[0]._id,
-          userName: usersData[0].userName,
-          role: usersData[0].role,
-        };
+        let currUser;
+        if (usersData[0].role === "Gamer") {
+          currUser = {
+            _id: usersData[0]._id,
+            userName: usersData[0].userName,
+            role: usersData[0].role,
+            cart: usersData[0].cart,
+          };
+        } else {
+          currUser = {
+            _id: usersData[0]._id,
+            userName: usersData[0].userName,
+            role: usersData[0].role, 
+          };
+        }
+        
 
         sessionStorage.setItem("currUser", JSON.stringify(currUser));
 
@@ -71,6 +81,7 @@ function LoginPage() {
         if (usersData[0].role === "Gamer") {
           // Navigate to Gamer page
           console.log("Navigate to Gamer page");
+          navigate("/gamer");
         }
 
         // If user role is gaming company
