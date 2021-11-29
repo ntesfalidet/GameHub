@@ -1,3 +1,4 @@
+/* Yuanyuan: Style sheet for gamer page */
 #GamerPage {
     background-image: url(../img/background.jpg);
     background-repeat: repeat;
@@ -9,7 +10,7 @@
 }
 
 h1 {
-    color:white;
+    color: white;
     margin-top: 30%;
     margin-left: 25%;
     margin-right: 25%;

@@ -1,3 +1,4 @@
+/* Yuanyuan : style sheet for register page */
 #registerContainer {
     background-image: url(../img/background.jpg);
     background-repeat: repeat;
@@ -5,14 +6,14 @@
 }
 
 .title {
-    font-family:'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 10%;
     color: #DCDCDC;
 }
 
 .title2 {
-    font-family:'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     color: #DCDCDC;
     font-size: 18px;
@@ -20,7 +21,7 @@
 
 .box {
     /* text-align: center; */
-    font-family:'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 1%;
     margin-left: 33%;
     padding: 20px;
@@ -34,17 +35,17 @@
 }
 
 .btn {
-    background-color:#696969;
-    display:inline-block;
-    padding:0.35em 1.2em;
-    border:0.1em solid #DCDCDC;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.12em;
+    background-color: #696969;
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #DCDCDC;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
     box-sizing: border-box;
-    text-decoration:none;
-    font-weight:300;
-    color:#DCDCDC;
-    text-align:center;
+    text-decoration: none;
+    font-weight: 300;
+    color: #DCDCDC;
+    text-align: center;
     transition: all 0.2s;
 }
 
@@ -53,9 +54,9 @@ hr {
 }
 
 .btn:hover {
-    color:#DCDCDC;
-    background-color:rgba(255, 255, 255, 0);
-    border:0.1em solid #DCDCDC;
+    color: #DCDCDC;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.1em solid #DCDCDC;
 }
 
 input {
@@ -66,6 +67,7 @@ input {
     background-color: rgba(255, 255, 255, 0.6);
     font: 20px;
 }
+
 .footer {
     margin-top: 10%;
     color: #DCDCDC;

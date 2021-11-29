@@ -4,6 +4,8 @@ import NavigationComponent from "../../components/Gamer/GamerNavBar";
 import StoreList from "../../components/Gamer/StoreList";
 import './styles/GamerStorePage.css'
 
+// Yuanyuan
+// Gamer Store Page
 function GamerStorePage() {
     let [storeItem, setStoreItem] = useState([]);
     console.log("gaga", storeItem);
@@ -18,7 +20,8 @@ function GamerStorePage() {
         }
     }
     useEffect(() => {
-        getStoreItems();}, []);
+        getStoreItems();
+    }, []);
     return (
         <div id="StoreItems">
             <NavigationComponent />
@@ -28,7 +31,7 @@ function GamerStorePage() {
                 <div className="center">Designed by Nathaniel & Yuanyuan</div>
             </div>
         </div>
-  );
+    );
 }
 
 export default GamerStorePage;
