@@ -1,0 +1,54 @@
+/* Styles for login page */
+/* Nathaniel */
+
+.welcomeTitle {
+  font-size: 55px;
+  font-weight: 550;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.welcomeSubTitle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.loginFormContainer {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+#loginForm {
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+  width: 25%;
+}
+
+.loginTitle {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.userNameSection {
+  padding: 10px;
+}
+
+.passwordSection {
+  padding: 10px;
+}
+
+.roleSection {
+  padding: 10px;
+}
+
+.loginSection {
+  padding: 10px;
+  text-align: center;
+}
+
+.RegisterSection {
+  padding: 10px;
+  text-align: center;
+}

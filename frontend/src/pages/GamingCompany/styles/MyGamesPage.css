@@ -1,0 +1,51 @@
+/* Styles for MyGames page for a gaming company user */
+/* Nathaniel */
+
+.publishGameFormContainer {
+  padding-top: 10px;
+  width: 40%;
+  margin-left: 30%;
+}
+
+#publishGameForm {
+  border: 2px solid gainsboro;
+}
+
+.publishGameFormTitle {
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.publishGameFormSection1 {
+  display: flex;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.gameImage {
+  margin-left: 85px;
+}
+
+.publishGameFormSection2 {
+  display: flex;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.gamePrice {
+  margin-left: 25px;
+}
+
+.publishGameSection {
+  text-align: center;
+  padding-bottom: 10px;
+}  
+
+.myGamesTitle {
+  padding-top: 20px;
+  text-align: center;
+  font-weight: 510;
+  font-size: 30px;
+  padding-bottom: 20px;
+}

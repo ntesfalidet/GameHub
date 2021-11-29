@@ -1,0 +1,11 @@
+/* Styles for main gaming company page */
+/* Nathaniel */
+.navbar-light {
+  background-color: #eee;
+  border-bottom: 2px solid #bbb;
+}
+
+.navbar-light ul {
+  margin: 0;
+  list-style: none;
+}
