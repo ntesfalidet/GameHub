@@ -1,3 +1,50 @@
+.navbar {
+    background-color: #696969;
+}
 .nav-item {
+    margin-left: 13%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #696969;
+}
+
+.button {
     margin-left: 20%;
+    background-color: #696969;
+    border: 2px solid #696969;
+    border-radius: 12px;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    font-size: 24px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.4s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }

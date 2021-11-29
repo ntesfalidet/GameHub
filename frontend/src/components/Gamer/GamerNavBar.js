@@ -1,18 +1,15 @@
-import { Link, useLocation} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './styles/GamerNavBar.css';
+// Yuanyuan 
+// Gamer Navbar
 function NavigationComponent() {
-    const location = useLocation();
-
     return (
-        <nav className="navbar sticky-top navbar-expand-lg navbar-light" role="navigation">
+        <nav className="navbar navbar-expand-lg" role="navigation">
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-4 mb-lg-0">
-                    <li className="nav-item">
-                        <Link to="/mycart">Cart</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/">Store</Link>
-                    </li>
+                <ul className="navbar-nav mr-auto">
+                <li className="nav-item"><Link to="/gamer"><button className="button"><span>Home</span></button></Link></li>
+                    <li className="nav-item"><Link to="/gamer/myCart"><button className="button"><span>Cart</span></button></Link></li>
+                    <li className="nav-item"><Link to="/gamer/gamerStore"><button className="button"><span>Store</span></button></Link></li>
                 </ul>
             </div>
         </nav>
