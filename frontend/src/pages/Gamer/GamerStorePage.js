@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NavigationComponent from "../../components/Gamer/GamerNavBar";
 import StoreList from "../../components/Gamer/StoreList";
+import './styles/GamerStorePage.css'
 
 function GamerStorePage() {
     let [storeItem, setStoreItem] = useState([]);
@@ -19,9 +20,13 @@ function GamerStorePage() {
     useEffect(() => {
         getStoreItems();}, []);
     return (
-        <div>
+        <div id="StoreItems">
             <NavigationComponent />
             <StoreList game={storeItem}></StoreList>
+            <div className="footer">
+                <div className="center">Copyright 2021</div>
+                <div className="center">Designed by Nathaniel & Yuanyuan</div>
+            </div>
         </div>
   );
 }
