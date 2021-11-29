@@ -1,0 +1,41 @@
+/* Styles for MyGamesItem component */
+/* Nathaniel */
+
+.myGamesItemContainer {
+  border-bottom: 2px solid gainsboro;
+  border-top: 2px solid gainsboro; 
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myGamesItemImage img {
+  height: 180px;
+  width: 180px;
+}
+
+.myGamesItemTitle {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.myGamesItemPublishedBy {
+  font-size: 15px;
+}
+
+.myGamesItemDescSection {
+  font-style: italic;
+  font-size: 17px;
+  width: 350px;
+}
+
+.myGameItemPriceSection {
+  font-weight: bold;
+  font-size: 25px; 
+}
+
+.deleteMyGameButtonSection button {
+  width: 50px;
+}
