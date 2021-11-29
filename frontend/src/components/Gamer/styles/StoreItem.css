@@ -1,12 +1,10 @@
 .card {
-    margin-top: 10%;
-    position: relative;
-    display: inline-block;
+    margin-top: 10px;
     background-color: #e1e7ec;
     border-radius: 7px !important;
     border-color: #DCDCDC;
     margin-bottom: 30px !important;
-    left:60%;
+    left: 60%;
 }
 
 .card-title {

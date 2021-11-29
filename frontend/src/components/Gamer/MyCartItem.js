@@ -8,7 +8,6 @@ function MyCartItem({ game, cartItemInfo }) {
     let curUser = JSON.parse(sessionStorage.getItem("currUser"));
     console.log("sad", cartItemInfo);
     const deleteButtonHandler = async (event) => {
-        event.preventDefault();
         const userInfo = {
             gamer : {
                 _id: curUser._id,
@@ -40,7 +39,7 @@ function MyCartItem({ game, cartItemInfo }) {
                     <h4 className="card-title">{game.gameTitle}</h4>
                     <h5 className="card-text"><small>price: </small>${game.gamePrice}</h5>
                     <h5 className="card-text"><small>published by: </small>{game.publishedBy}</h5>
-                    <button onClick={deleteButtonHandler } className="btn btn-sm btn-warning float-right">Delete this item</button>
+                    <button onClick={()=>deleteButtonHandler() } className="btn btn-sm btn-warning float-right">Delete this item</button>
             </div>
         </div> 
     );

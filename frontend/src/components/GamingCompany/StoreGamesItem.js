@@ -7,7 +7,6 @@ export function StoreGamesItem({ game }) {
   return (
     <div>
       <div className="storeGamesItemContainer">
-        {/*A container for holding the game image, title, and published by */}
         <div className="storeGamesItemSection1">
           <div className="storeGamesItemImage">
             <img src={game.gameImageURL} alt="myGameImage" />

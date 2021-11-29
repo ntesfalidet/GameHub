@@ -1,5 +1,6 @@
 import React from "react";
 import MyCartItem from "./MyCartItem";
+import './styles/MyCartList.css';
 
 function MyCartList({ cart, cartItemInfo }) {
 
@@ -10,7 +11,7 @@ function MyCartList({ cart, cartItemInfo }) {
       }
     
       return (
-        <div className="col-md-4 col-sm-6">{cartList()}</div>
+        <div className="cartItems col-md-4 col-sm-6">{cartList()}</div>
       );
 } 
 export default MyCartList;
