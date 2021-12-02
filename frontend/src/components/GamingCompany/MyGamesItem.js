@@ -5,6 +5,12 @@ import './styles/MyGamesItem.css';
 // Takes game object and loadMyGamesData function as props
 // from MyGamesList component.
 // Nathaniel
+
+
+// CODE REIVEW PROJECT 3 - MICHAEL CHANG 👉 NATHANIEL TESFALIDET
+// COOL use of sessionStorage!! We used localStorage on our project, but I think sessionStorage may have been a better choice for getting currentUser data.
+// Need to learn more about the difference between the two. Great job!
+
 const MyGamesItem = ({ game, loadMyGamesData }) => {
   // Current user data (gaming company)
   let currUserData = sessionStorage.getItem("currUser");
