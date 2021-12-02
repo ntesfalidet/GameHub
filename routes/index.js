@@ -50,6 +50,13 @@ router.post("/register", async function (req, res) {
   }
 });
 
+// CODE REIVEW PROJECT 3 - MICHAEL CHANG 👉 NATHANIEL TESFALIDET
+// I am ALWAYS guilty of this too, but I read it is best to just let the route refer to the resource (noun) and drop the verb. 
+// So getAllStoreGames would be allStoreGames. You receive the GET for free from the request
+// https://restfulapi.net/resource-naming/ 
+// 2. Best Practices >> 2.1. Use nouns to represent resources
+
+
 // Route for getting all games from gamestore collection (Nathaniel)
 router.get("/getAllStoreGames", async function (req, res) {
   try {
