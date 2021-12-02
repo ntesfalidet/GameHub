@@ -60,6 +60,9 @@ const MyGamesPage = () => {
     loadMyGamesData();
   }, []);
 
+// CODE REIVEW PROJECT 3 - MICHAEL CHANG 👉 NATHANIEL TESFALIDET
+// Add Typechecking with PropTypes
+// https://reactjs.org/docs/typechecking-with-proptypes.html
   return (
     <div>
       <PublishGameForm loadMyGamesData={loadMyGamesData}></PublishGameForm>
