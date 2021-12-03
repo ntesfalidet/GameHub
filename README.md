@@ -38,4 +38,4 @@ The objective of this project is to create a full-stack web application (using N
 - Registration(UI, CRUD operations, and routes for register page)
 - Gamer (UI, CRUD operations, and routes for gamer pages)
 
-
+---Anni: Nice Readme!

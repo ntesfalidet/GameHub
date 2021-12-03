@@ -138,4 +138,6 @@ const LoginPage = () => {
   );
 }
 
+//Anni: Love the seesion storage usage.
+
 export default LoginPage;
