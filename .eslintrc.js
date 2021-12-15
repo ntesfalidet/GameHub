@@ -8,6 +8,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12,
     sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   rules: {
     indent: ["error", 2, { SwitchCase: 1 }],

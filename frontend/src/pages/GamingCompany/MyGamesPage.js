@@ -11,7 +11,7 @@ const MyGamesPage = () => {
   currUserData = JSON.parse(currUserData);
 
   // myGames state holds the array of my games for a gaming company
-  // setMyGames will set the state of myGames 
+  // setMyGames will set the state of myGames
   let [myGames, setMyGames] = useState([]);
 
   // Function for loading my games data for a gaming company user
@@ -22,8 +22,8 @@ const MyGamesPage = () => {
     // return the response (as raw data).
     // The response we get is the gaming company's games
     const gamingCompanyUser = {
-        userName: currUserData.userName,
-        role: currUserData.role,
+      userName: currUserData.userName,
+      role: currUserData.role,
     };
 
     const myGamesResRawData = await fetch("/api/getMyGames", {
@@ -64,9 +64,12 @@ const MyGamesPage = () => {
     <div>
       <PublishGameForm loadMyGamesData={loadMyGamesData}></PublishGameForm>
       <h2 className="myGamesTitle">My Games</h2>
-      <MyGamesList myGames={myGames} loadMyGamesData={loadMyGamesData}></MyGamesList>
+      <MyGamesList
+        myGames={myGames}
+        loadMyGamesData={loadMyGamesData}
+      ></MyGamesList>
     </div>
   );
-}
+};
 
 export default MyGamesPage;

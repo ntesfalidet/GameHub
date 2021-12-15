@@ -2,21 +2,19 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NavBarGamer from "../../components/Gamer/NavBarGamer.js";
 import MyCartList from "../../components/Gamer/MyCartList";
-import "./styles/GamerCartPage.css"
+import "./styles/GamerCartPage.css";
 
 // Yuanyuan
 // Gamer Cart Page
 const GamerCartPage = () => {
   let curUser = JSON.parse(sessionStorage.getItem("currUser"));
-  let [cartItem, setCartItem] = useState([]);
-  console.log("cartItem:", cartItem);
-  const cartItemInfo = async () => {
+  let [cartItems, setCartItems] = useState([]);
+  const getCartItems = async () => {
     const userInfo = {
       userName: curUser.userName,
       role: curUser.role,
-      cart: curUser.cart,
     };
-    const cartInfo = await fetch("/api/getCartItems" , {
+    const cartInfo = await fetch("/api/getCartItems", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,27 +25,26 @@ const GamerCartPage = () => {
     if (!cartInfo.ok) {
       console.log("Error:", cartInfo.status);
     } else {
-      let userCart = await cartInfo.json();
-      let cartItems = userCart.cart; 
-      console.log("Cart items are:", cartItems);
-      setCartItem(cartItems);
+      let userCartData = await cartInfo.json();
+      let userCart = userCartData.cart;
+      console.log("Cart items are:", userCart);
+      setCartItems(userCart);
     }
   };
   useEffect(() => {
-    cartItemInfo()
+    getCartItems();
   }, []);
 
   return (
     <div id="gamerCartContainer">
       <NavBarGamer />
-      {/*<MyCartList cart={curUser.cart} cartItemInfo={cartItemInfo} />*/}
-      <MyCartList cart={cartItem} cartItemInfo={cartItemInfo} />
-      <div className="footer">
+      <MyCartList cart={cartItems} getCartItems={getCartItems} />
+      <div className="footer gamerCartFooter">
         <div className="center">Copyright 2021</div>
         <div className="center">Designed by Nathaniel & Yuanyuan</div>
       </div>
     </div>
   );
-}
+};
 
 export default GamerCartPage;

@@ -9,11 +9,11 @@ const DB_NAME = "game-hub-db";
 function gameHubDB() {
   // Database operations/functions in gameHubDB object
   const gameHubDB = {};
-  
+
   // Finds existing user object (based on attributes of user object as a query)
   // This function is called when a user (gamer or gaming company) logs in and
   // for getting my games for a gaming company user.
-  // Nathaniel 
+  // Nathaniel
   gameHubDB.findUser = async function (user) {
     let client;
     try {
@@ -40,7 +40,7 @@ function gameHubDB() {
   gameHubDB.createUser = async function (user) {
     let client;
     try {
-      client = new MongoClient(URL, {useUnifiedTopology: true});
+      client = new MongoClient(URL, { useUnifiedTopology: true });
       console.log("Connecting Database");
       await client.connect();
       console.log("Connected Successfully");
@@ -99,7 +99,7 @@ function gameHubDB() {
       console.log("Closing connection to game-hub-db");
       await client.close();
     }
-  }
+  };
 
   // Add game object to the myGames array of a gaming company user
   // This function is called when a gaming company publishes a game
@@ -113,10 +113,10 @@ function gameHubDB() {
       console.log("Connected to game-hub-db");
       const db = client.db(DB_NAME);
       const usersCollection = db.collection("users");
-      // returns the response of updating myGames field 
-      // (inserting game object to myGames field) 
+      // returns the response of updating myGames field
+      // (inserting game object to myGames field)
       // of a gaming company user
-      return await usersCollection.updateOne( 
+      return await usersCollection.updateOne(
         { _id: new ObjectId(gamingCompanyUser._id) },
         { $push: { myGames: game } }
       );
@@ -126,7 +126,7 @@ function gameHubDB() {
       console.log("Closing connection to game-hub-db");
       await client.close();
     }
-  }
+  };
 
   // Delete game object from gamestore collection
   // This function is called when a gaming company deletes a game
@@ -149,7 +149,7 @@ function gameHubDB() {
         gameImageURL: game.gameImageURL,
         gameDesc: game.gameDesc,
         gamePrice: game.gamePrice,
-        publishedBy: game.publishedBy
+        publishedBy: game.publishedBy,
       });
     } catch (error) {
       console.log(error);
@@ -157,7 +157,7 @@ function gameHubDB() {
       console.log("Closing connection to game-hub-db");
       await client.close();
     }
-  }
+  };
 
   // Delete game object from the myGames array of a gaming company user
   // This function is called when a gaming company deletes a game
@@ -172,8 +172,8 @@ function gameHubDB() {
       console.log("Connected to game-hub-db");
       const db = client.db(DB_NAME);
       const usersCollection = db.collection("users");
-      // returns the response of updating myGames field 
-      // (deleting game object from myGames field) 
+      // returns the response of updating myGames field
+      // (deleting game object from myGames field)
       // of a gaming company user
       return await usersCollection.updateOne(
         { _id: new ObjectId(gamingCompanyUser._id) },
@@ -185,7 +185,7 @@ function gameHubDB() {
       console.log("Closing connection to game-hub-db");
       await client.close();
     }
-  }
+  };
 
   // When gamers adds games to their cart, games will be insert into cart collection.
   // This function is called when gamers are adding game objects to their cart.
@@ -213,7 +213,7 @@ function gameHubDB() {
       console.log("Closing");
       await client.close();
     }
-  }
+  };
 
   // Delete items from cart array
   // Yuanyuan
@@ -228,7 +228,7 @@ function gameHubDB() {
       const usersCollection = db.collection("users");
       return await usersCollection.updateOne(
         { _id: new ObjectId(user._id) },
-        { $pull: { cart: { gameTitle: game.gameTitle } } }
+        { $pull: { cart: { _id: game._id } } }
       );
     } catch (error) {
       console.log(error);
@@ -236,8 +236,7 @@ function gameHubDB() {
       console.log("Closing connect");
       await client.close();
     }
-  }
-
+  };
 
   return gameHubDB;
 }

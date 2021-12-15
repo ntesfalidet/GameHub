@@ -15,18 +15,24 @@ const NavBarCompany = () => {
           <img src="../../../gameIcon.png" alt="gameIconImg" />
         </li>
         <li className="nav-item storeNavItem">
-          <Link className="nav-link" to="/gamingCompany">Store</Link>
+          <Link className="nav-link" to="/gamingCompany">
+            Store
+          </Link>
         </li>
         <li className="nav-item myGamesNavItem">
-          <Link className="nav-link" to="/gamingCompany/myGames">My Games</Link>
+          <Link className="nav-link" to="/gamingCompany/myGames">
+            My Games
+          </Link>
         </li>
       </ul>
       <div className="welcomeGamingCompany">
         Welcome {currUserData.userName}
       </div>
-      <Link className="btn btn-primary logoutButton" to="/">Logout</Link>
+      <Link className="btn btn-primary logoutButton" to="/">
+        Logout
+      </Link>
     </nav>
   );
-}
+};
 
 export default NavBarCompany;

@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import './styles/LoginPage.css';
+import "./styles/LoginPage.css";
 
-// Login page 
-// Nathaniel 
+// Login page
+// Nathaniel
 const LoginPage = () => {
   // Used for navigating to Gamer page or Gaming company page
   let navigate = useNavigate();
@@ -26,12 +26,12 @@ const LoginPage = () => {
       userName: userNameRef.current.value,
       password: passwordRef.current.value,
       role: roleRef.current.value,
-    }
+    };
 
     // Send user input data to /api/loginUser route and
-    // return the response (as raw data) from backend when finding 
+    // return the response (as raw data) from backend when finding
     // an existing user upon login (with matching userName, password,
-    // and role). 
+    // and role).
     const userResRawData = await fetch("/api/loginUser", {
       method: "POST",
       headers: {
@@ -50,20 +50,22 @@ const LoginPage = () => {
       let userResData = await userResRawData.json();
       // Array of found users that match userName, password, and role
       // The array should only contain one user object if an existing
-      // user is found from user input data or no user objects if 
-      // no existing user is found from user input data  
+      // user is found from user input data or no user objects if
+      // no existing user is found from user input data
       let usersData = userResData.users;
 
       // If there is no existing user we want to render login error (via useState)
       if (!usersData.length) {
-        setLoginError("User does not exist (either incorrect username, password, and/or role credentials)");
+        setLoginError(
+          "User does not exist (either incorrect username, password, and/or role credentials)"
+        );
       }
 
-      // If there is an existing user 
+      // If there is an existing user
       else {
         setLoginError("");
 
-        // Store specific user attributes (_id, userName, and role) for current 
+        // Store specific user attributes (_id, userName, and role) for current
         // logged in user using sessionStorage
         let currUser = {
           _id: usersData[0]._id,
@@ -87,55 +89,77 @@ const LoginPage = () => {
         }
       }
     }
-  } 
+  };
 
   return (
     <div id="loginContainer">
       <div className="row">
         <h1 className="welcomeTitle1">Welcome to GameHub</h1>
-        <h2 className="welcomeTitle2">Bringing gamers and gaming companies together</h2>
+        <h2 className="welcomeTitle2">
+          Bringing gamers and gaming companies together
+        </h2>
         <div className="col-sm-4 box border loginBox">
           <form id="loginForm" onSubmit={handleLoginSubmit}>
             <div className="loginTitle">Login</div>
-            <div className="loginError">
-              {loginError}
-            </div>
+            <div className="loginError">{loginError}</div>
             <div className="userNameSection">
               <label className="form-label">Username</label>
-              <input className="form-control" type="text" ref={userNameRef} 
-              placeholder="Username" required />
+              <input
+                className="form-control"
+                type="text"
+                ref={userNameRef}
+                placeholder="Username"
+                required
+              />
             </div>
             <div className="passwordSection">
               <label className="form-label">Password</label>
-              <input className="form-control" type="password" ref={passwordRef}
-              placeholder="Password" required />
+              <input
+                className="form-control"
+                type="password"
+                ref={passwordRef}
+                placeholder="Password"
+                required
+              />
             </div>
             <div className="roleSection">
               <label htmlFor="roleSelectId">Select a role</label>
-              <select defaultValue={"Gamer"} className="form-select" type="form-control" ref={roleRef}
+              <select
+                defaultValue={"Gamer"}
+                className="form-select"
+                type="form-control"
+                ref={roleRef}
                 id="roleSelectId"
               >
                 <option>Gamer</option>
-                <option>Gaming company</option>  
+                <option>Gaming company</option>
               </select>
             </div>
             <hr />
             <div className="d-grid gap-2 mx-auto center loginSection">
-              <button type="submit" className="btn btn-primary signInButton">Sign in</button>
+              <button type="submit" className="btn btn-primary signInButton">
+                Sign in
+              </button>
             </div>
           </form>
           <hr className="loginHR" />
         </div>
         <div className="center navToRegisterSection">
-          <Link to="/register"><button className="btn btn-primary register">Register if you don't have an account</button></Link>
+          <Link to="/register">
+            <button className="btn btn-primary register">
+              Register if you don't have an account
+            </button>
+          </Link>
         </div>
       </div>
       <div className="footer">
         <div className="center footerSection1">Copyright 2021</div>
-        <div className="center footerSection2">Designed by Nathaniel & Yuanyuan</div>
-      </div>     
+        <div className="center footerSection2">
+          Designed by Nathaniel & Yuanyuan
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default LoginPage;

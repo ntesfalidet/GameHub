@@ -1,6 +1,11 @@
 /* Yuanyuan: Style sheet for gamer cart */
 #gamerCartContainer {
-    background-image: url(../../../images/background.jpg);
-    background-repeat: repeat;
-    background-size: 100%;
+  background-image: url(../../../images/background.jpg);
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+.gamerCartFooter {
+  margin-top: 38%;
+  text-align: center;
 }

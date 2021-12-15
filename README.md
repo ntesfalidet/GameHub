@@ -13,6 +13,8 @@ The objective of this project is to create a full-stack web application (using N
 
 ## Relevant Links
 - [Class website link](https://johnguerra.co/classes/webDevelopment_fall_2021/)
+- [Video demo link](https://drive.google.com/file/d/1EqrR9VoNFhEyjwyaxW_WUQ7wSPgvu8CL/view?usp=sharing)
+- [Google slides link](https://docs.google.com/presentation/d/1sDh6wsXc9jFuNWVp8kkjJSccw-4F1YPAc6rU9krnK0w/edit?usp=sharing)
 
 ## Build Instructions
 - Make sure to run `yarn install` in the root of repository and in the frontend folder to have all your node_modules depedencies.
@@ -37,5 +39,22 @@ The objective of this project is to create a full-stack web application (using N
 ### Yuanyuan
 - Registration(UI, CRUD operations, and routes for register page)
 - Gamer (UI, CRUD operations, and routes for gamer pages)
+
+## Screenshots
+Login Page
+![Login page screenshot](./frontend/src/images/screenshots/LoginPageScreenshot.jpg)
+Registration Page
+![Register page screenshot](./frontend/src/images/screenshots/RegisterPageScreenshot.jpg)
+Main Gamer Page
+![Gamer page 1 screenshot](./frontend/src/images/screenshots/GamerPageScreenshot1.jpg)
+Gamer Cart Page
+![Gamer page 2 screenshot](./frontend/src/images/screenshots/GamerPageScreenshot2.jpg)
+Gamer Store Page
+![Gamer page 3 screenshot](./frontend/src/images/screenshots/GamerPageScreenshot3.jpg)
+Gaming company Store Page
+![Gaming company page 1 screenshot](./frontend/src/images/screenshots/GamingCompanyPageScreenshot1.jpg)
+Gaming company My Games Page
+![Gaming company page 2 screenshot](./frontend/src/images/screenshots/GamingCompanyPageScreenshot2.jpg)
+
 
 

@@ -1,6 +1,18 @@
 /* Yuanyuan:
     Style sheet for store list */
 .storeList {
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
+.gamerStoreListTitle {
+  margin-top: 20px;
+  color: gainsboro;
+  text-align: center;
+}
+
+.gamerStoreListDescription {
+  color: gainsboro;
+  text-align: center;
+  margin-bottom: 20px;
 }

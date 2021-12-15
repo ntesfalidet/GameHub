@@ -1,9 +1,8 @@
 import { Outlet } from "react-router-dom";
-import NavBarCompany from "../../components/GamingCompany/NavBarCompany.js"
-import "./styles/GamingCompanyPage.css";
+import NavBarCompany from "../../components/GamingCompany/NavBarCompany.js";
 
 // Gaming company main page
-// Nathaniel 
+// Nathaniel
 const GamingCompanyPage = () => {
   return (
     <div>
@@ -15,6 +14,6 @@ const GamingCompanyPage = () => {
       <Outlet></Outlet>
     </div>
   );
-}
+};
 
 export default GamingCompanyPage;

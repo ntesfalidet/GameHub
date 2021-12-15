@@ -2,31 +2,31 @@
 /* Nathaniel */
 
 #loginContainer {
-    background-image: url(../../../images/background.jpg);
-    background-repeat: repeat;
-    background-size: cover;
+  background-image: url(../../../images/background.jpg);
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .welcomeTitle1 {
-  font-family:'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   margin-top: 10%;
-  color: #DCDCDC;
+  color: #dcdcdc;
 }
 
 .welcomeTitle2 {
-  font-family:'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
-  color: #DCDCDC;
+  color: #dcdcdc;
   font-size: 18px;
 }
 
 .loginBox {
-  font-family:'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 1%;
   margin-left: 33.5%;
   padding: 20px;
-  color: #DCDCDC;
+  color: #dcdcdc;
   background-color: rgba(169, 169, 169, 0.6);
 }
 
@@ -41,42 +41,42 @@
 }
 
 .footerSection1 {
-    margin-top: 1%;
-    text-align: center;
+  margin-top: 1%;
+  text-align: center;
 }
 
 .footerSection2 {
-    margin-top: 1%;
-    text-align: center;
+  margin-top: 1%;
+  text-align: center;
 }
 
 .signInButton {
-  background-color:#696969;
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #DCDCDC;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
+  background-color: #696969;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #dcdcdc;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
   box-sizing: border-box;
-  text-decoration:none;
-  font-weight:300;
-  color:#DCDCDC;
-  text-align:center;
-  transition: all 0.2s; 
+  text-decoration: none;
+  font-weight: 300;
+  color: #dcdcdc;
+  text-align: center;
+  transition: all 0.2s;
 }
 
 .register {
-  background-color:#696969;
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #DCDCDC;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
+  background-color: #696969;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #dcdcdc;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
   box-sizing: border-box;
-  text-decoration:none;
-  font-weight:300;
-  color:#DCDCDC;
-  text-align:center;
+  text-decoration: none;
+  font-weight: 300;
+  color: #dcdcdc;
+  text-align: center;
   transition: all 0.2s;
 }
 
@@ -85,15 +85,15 @@
 }
 
 .signInButton:hover {
-  color:#DCDCDC;
-  background-color:rgba(255, 255, 255, 0);
-  border:0.1em solid #DCDCDC;
+  color: #dcdcdc;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.1em solid #dcdcdc;
 }
 
 .register:hover {
-  color:#DCDCDC;
-  background-color:rgba(255, 255, 255, 0);
-  border:0.1em solid #DCDCDC;
+  color: #dcdcdc;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.1em solid #dcdcdc;
 }
 
 input {
@@ -107,13 +107,13 @@ input {
 
 .footer {
   margin-top: 10%;
-  color: #DCDCDC;
+  color: #dcdcdc;
 }
 
 .loginTitle {
-  font-family:'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
-  color: #DCDCDC;
+  color: #dcdcdc;
   font-size: 25px;
 }
 
