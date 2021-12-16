@@ -1,7 +1,7 @@
 /* Yuanyuan:
     Style sheet for gamer store items */
 .gamerStoreItemsContainer {
-    background-color: rgba(169, 169, 169, 0.6);
+    background-color: rgb(94, 94, 94);
     border-bottom: 2px solid gainsboro;
     border-top: 2px solid gainsboro;
     padding: 15px;
@@ -16,26 +16,43 @@
     width: 180px;
 }
 
+.gamerStoreItemSection1 {
+    box-sizing: content-box;
+    height: 290px;
+    width: 200px;
+}
+
 .gamerStoreItemTitle {
-    color: gainsboro;
+    color: white;
     font-size: 25px;
     font-weight: 600;
 }
 
 .gamerStoreItemPublishedBy {
-    color: gainsboro;
+    color: white;
     font-size: 15px;
 }
 
 .gamerStoreItemDescription {
-    color: gainsboro;
+    color: white;
     font-style: italic;
     font-size: 17px;
     width: 350px;
 }
 
 .gamerStoreItemPrice {
-    color: gainsboro;
+    color: white;
     font-weight: bold;
     font-size: 25px;
+}
+
+.addButton {
+    color: white;
+    background-color: #77C2AE;
+    border: 0em;
+}
+
+.addButton:hover {
+    color: white;
+    background-color: #68ab99;
 }
