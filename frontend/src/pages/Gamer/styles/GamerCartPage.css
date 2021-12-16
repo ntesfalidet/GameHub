@@ -6,6 +6,19 @@
 }
 
 .gamerCartFooter {
+  color:white;
   margin-top: 38%;
   text-align: center;
+}
+
+.gamerCartTitle {
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+}
+
+.gamerCartDescription {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
 }
