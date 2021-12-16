@@ -27,7 +27,7 @@ const MyCartItem = ({ game, getCartItems }) => {
             console.log("Response status ", deleteHandler.status);
         } else {
             let deleteItem = await deleteHandler.json();
-            window.confirm("Do you want to delete this game?");
+            console.log("Successfully delete", deleteItem);
         }
         getCartItems();
     };
