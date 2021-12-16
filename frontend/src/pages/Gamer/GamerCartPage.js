@@ -38,6 +38,10 @@ const GamerCartPage = () => {
   return (
     <div id="gamerCartContainer">
       <NavBarGamer />
+      <h1 className="gamerCartTitle">My Cart</h1>
+      <div className="gamerCartDescription">
+        You can check your cart and delete items that you do not want to buy.
+      </div>
       <MyCartList cart={cartItems} getCartItems={getCartItems} />
       <div className="footer gamerCartFooter">
         <div className="center">Copyright 2021</div>
