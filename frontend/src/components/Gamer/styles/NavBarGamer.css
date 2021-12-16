@@ -1,8 +1,7 @@
 /* Yuanyuan: 
     Style Sheet for Navigation bar of Gamer Pages */
 .navBarGamer {
-    background-color: #eee;
-    border-bottom: 2px solid #bbb;
+    background-color: #757575;
 }
 
 .navBarItems {
@@ -10,6 +9,7 @@
 }
 
 .welcomeGamer {
+    color: white;
     margin-right: 150px;
     font-size: 20px;
     font-weight: 520;
@@ -21,7 +21,14 @@
 }
 
 .logoutButton {
+    background-color: #77C2AE;
+    border: 0em;
     margin-right: 20px;
+}
+
+.logoutButton:hover {
+    color: white;
+    background-color: #68ab99;
 }
 
 .navItemCart {
@@ -30,17 +37,16 @@
     font-weight: 520;
 }
 
+.navItemCart a {
+    color: white !important;
+}
+
 .navItemStore {
     margin-left: 20px;
     font-size: 20px;
     font-weight: 520;
 }
 
-.button:hover span {
-    padding-right: 25px;
-}
-
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
+.navItemStore a {
+    color: white !important;
 }
