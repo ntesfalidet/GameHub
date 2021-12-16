@@ -15,7 +15,7 @@ const NavBarGamer = () => {
                     <Link className="nav-link" to="/gamer/myCart">Cart</Link>
                 </li>
                 <li className="nav-item navItemStore">
-                    <Link className="nav-link" to="/gamer">Store</Link>
+                    <Link className="nav-link navStore" to="/gamer">Store</Link>
                 </li>
             </ul>
             <div className="welcomeGamer">
