@@ -1,9 +1,9 @@
 /* Yuanyuan:
     Style sheet for cart items part */
 .gamerCartItemContainer {
-    background-color: rgba(169, 169, 169, 0.6);
-    border-bottom: 2px solid gainsboro;
-    border-top: 2px solid gainsboro;
+    background-color: #757575;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
     padding: 15px;
     margin-bottom: 10px;
     display: flex;
@@ -12,30 +12,40 @@
 }
 
 .cartMainImg img {
+    margin-left: 5px;
     height: 180px;
     width: 180px;
 }
 
+.gamerCartItemSection1 {
+    box-sizing: content-box;
+    height: 250px;
+    width: 200px;
+}
 .gamerCartItemTitle {
-    color: gainsboro;
+    color: white;
     font-size: 25px;
     font-weight: 600;
 }
 
 .gamerCartItemPublishedBy {
-    color: gainsboro;
+    color: white;
     font-size: 15px;
 }
 
 .gamerCartItemDescription {
-    color: gainsboro;
+    color: white;
     font-style: italic;
     font-size: 17px;
     width: 350px;
 }
 
 .gamerCartItemPrice {
-    color: gainsboro;
+    color: white;
     font-weight: bold;
     font-size: 25px;
+}
+
+.deleteButton {
+    margin-right: 5px;
 }
