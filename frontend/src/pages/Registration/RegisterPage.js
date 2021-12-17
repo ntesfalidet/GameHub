@@ -33,6 +33,12 @@ const RegisterPage = () => {
     } else {
       let newUserData = await newUser.json();
       if (newUserData.users.length) {
+        
+        // Shushu Chen: I like that you first check if the user already
+        // exists. Maybe you could also display the error message to
+        // the user to let her know that the username she just entered has
+        // already been taken
+        
         console.log("This user already exists");
       } else {
         navigate("/");
