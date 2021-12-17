@@ -6,6 +6,11 @@ import "./styles/StoreList.css";
 // Yuanyuan
 // Store List
 const StoreList = ({ game }) => {
+  
+  // Shushu Chen: I like that you used a function to render
+  // the list of items, which makes the code very clean and
+  // easier for debugging and offers room for more components
+  // in the future
   const renderStoreGames = () => {
     return game.map((c) => (
       <StoreItem key={`gameID_${c._id}`} game={c}></StoreItem>
