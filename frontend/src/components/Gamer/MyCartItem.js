@@ -8,6 +8,8 @@ import "./styles/MyCartItem.css";
 const MyCartItem = ({ game, getCartItems }) => {
     let curUser = JSON.parse(sessionStorage.getItem("currUser"));
     const deleteButtonHandler = async (event) => {
+        // Shushu Chen: how about naming userInfo as cartInfo
+        // since it contains both user info and game info objects?
         const userInfo = {
             gamer: {
                 _id: curUser._id,
@@ -27,6 +29,9 @@ const MyCartItem = ({ game, getCartItems }) => {
             console.log("Response status ", deleteHandler.status);
         } else {
             let deleteItem = await deleteHandler.json();
+            
+            // Shushu Chen: I like that you used an alert to let
+            // user know that the deletion is successful
             alert("You have removed the item successfully!");
         }
         getCartItems();
